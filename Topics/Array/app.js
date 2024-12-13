@@ -1,4 +1,4 @@
-// // Write a function called 'sumEvenNumbers' that takes an array of numbers as a parameter
+// // function called 'sumEvenNumbers' that takes an array of numbers as a parameter
 // // and returns the sum of all even numbers in the array.
 // function sumEvenNumbers(numbers){
 //     let sum=0;
@@ -13,7 +13,7 @@
 
 
 
-// // Write a function that takes an array of numbers as an argument 
+// // function that takes an array of numbers as an argument 
 // // and returns the sum of all the numbers in the array.
 // function sumOfNumbers(numbers){
 //         let total =0;
@@ -31,7 +31,7 @@
 
 
 
-// //  Write a function that takes an array of strings as an argument and returns a new
+// //  function that takes an array of strings as an argument and returns a new
 // //  array with only the strings that have a length greater than 5.
 // function returnString(number){
 //     let arr = []
@@ -46,7 +46,7 @@
 
 
 
-// // a function that takes an array and returns an another array in reverse order
+// // function that takes an array and returns an another array in reverse order
 // function reverseArray(numbers){
 //     let arr = [];
 //     for(let i=0, j=numbers.length-1; i<numbers.length, j>=0; i++, j--){
@@ -56,21 +56,23 @@
 // }
 // let catchReverseArray = reverseArray(["r", "t", "h", "u", "b"]);
 // console.log(catchReverseArray)
+// using .reverse() method
+// let arr = [2,34,42,45,0]
+// let result = arr.reverse()
+// console.log(result)
 
-
-
-// Does the element exist in an array or not
-function checkElement(arrayElement, number){
-    for(let i=0; i<arrayElement.length; i++){
-        if(arrayElement[i]==number){
-            console.log(number)
-            return true
-        }
-    }
-    return false
-}
-let catchCheckElement = checkElement([2,4,6,36,3,90,6,35], 36);
-console.log(catchCheckElement);
+// // Does the element exist in an array or not
+// function checkElement(arrayElement, number){
+//     for(let i=0; i<arrayElement.length; i++){
+//         if(arrayElement[i]==number){
+//             console.log(number)
+//             return true
+//         }
+//     }
+//     return false
+// }
+// let catchCheckElement = checkElement([2,4,6,36,3,90,6,35], 36);
+// console.log(catchCheckElement);
 
 
 
