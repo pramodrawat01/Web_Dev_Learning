@@ -56,7 +56,15 @@
 // }
 // let catchReverseArray = reverseArray(["r", "t", "h", "u", "b"]);
 // console.log(catchReverseArray)
-// using .reverse() method
+// // without function
+// let numbers = ["r", "t", "h", "u", "b"]
+// let arr = [];
+// for(let i=0, j=numbers.length-1; i<numbers.length, j>=0; i++, j--){
+//     arr[i] = numbers[j]
+// }
+// console.log(arr)
+
+//using .reverse() method
 // let arr = [2,34,42,45,0]
 // let result = arr.reverse()
 // console.log(result)
@@ -75,4 +83,47 @@
 // console.log(catchCheckElement);
 
 
+// // find the maximum and minimum element of array
+// const INT_MAX = Number.MAX_SAFE_INTEGER;
+// function find(arr){
+//     let min=INT_MAX;
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i]<min){
+//             min = arr[i];
+//         }
+//     }
+//     return min;
+// }
+// console.log(find([3,4,5,62,8]));
 
+
+// // short an array in ascending order
+// function shortArray(arr){
+//     for(let i=0; i<arr.length-1; i++){
+//         for(let j=0; j<arr.length-1; j++){
+//             if(arr[j]>arr[j+1]){
+//                 let temp = arr[j];
+//                 arr[j] = arr[j+1];
+//                 arr[j+1] = temp;
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// console.log(shortArray([2,4,12,3,9,10,8,5]));
+
+
+// Move all negative numbers to the begining and positive to end
+function shortArray(arr){
+    for(let i=0; i<arr.length-1; i++){
+        for(let j=0; j<arr.length-1; j++){
+            if(arr[j]>arr[j+1]){
+                let extra = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = extra;
+            }
+        }
+    }
+    return arr;
+}
+console.log(shortArray([2,-4,-12,3,9,-10,8,5]));
