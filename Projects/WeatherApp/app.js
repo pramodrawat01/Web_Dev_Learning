@@ -86,7 +86,6 @@ async function fetchUserWeathreInfo(coordinates){
     }
     catch(err){
         loadingScreen.classList.remove("active");
-        // ?? add not found here
     }
 
 }
