@@ -5,16 +5,18 @@
 // console.log(getSqure(7));
 
 
-// function called 'createCounter' that returns a function. The returned function should
-// increment a counter variable each time it is called and return the current count.
-function createCounter(){
-   let counter = 0;
-    return ()=> {
-        counter++;
-        return counter;
-    }
-}
-console.log(createCounter())
-let catchCounter = createCounter()
-console.log(catchCounter())
-console.log(catchCounter())
+// // function called 'createCounter' that returns a function. The returned function should
+// // increment a counter variable each time it is called and return the current count.
+// function createCounter(){
+//     let counter = 0;
+//     return ()=> {
+//         counter++;
+//         return counter;
+//     }
+// }
+
+// let catchCounter = createCounter()
+// console.log(catchCounter())       // 1
+// console.log(catchCounter())       // 2
+ 
+

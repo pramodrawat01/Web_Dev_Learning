@@ -113,17 +113,81 @@
 // console.log(shortArray([2,4,12,3,9,10,8,5]));
 
 
-// Move all negative numbers to the begining and positive to end
-function shortArray(arr){
-    for(let i=0; i<arr.length-1; i++){
-        for(let j=0; j<arr.length-1; j++){
-            if(arr[j]>arr[j+1]){
-                let extra = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = extra;
-            }
-        }
-    }
-    return arr;
-}
-console.log(shortArray([2,-4,-12,3,9,-10,8,5]));
+// // Move all negative numbers to the begining and positive to end
+// function shortArray(arr){
+//     for(let i=0; i<arr.length-1; i++){
+//         for(let j=0; j<arr.length-1; j++){
+//             if(arr[j]>arr[j+1]){
+//                 let extra = arr[j];
+//                 arr[j] = arr[j+1];
+//                 arr[j+1] = extra;
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// console.log(shortArray([2,-4,-12,3,9,-10,8,5]));
+
+
+// // find duplicate elements in an order
+// let arr = [2,4,3,5,2,4,1];
+// let arr1 = []
+// for(let i=0; i<arr.length-1; i++){
+//     for(let j=1; j<arr.length-1; j++){
+//         if(arr[i]==arr[j]){
+//             for(let k=0; k<arr.length-1; k++){
+//                 if(arr[i] != arr1[k] ){
+//                     arr1.push(arr[i])
+//                 }
+//             }
+            
+//         }
+//     }
+// }
+// console.log(arr1);
+
+
+
+// // count number of occurrences (or frequency) in a sorted array
+// function frequency(arr, num){
+//     let count =0;
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i] == num){
+//             count++
+//         }
+//     }
+//     return count;
+// }
+// console.log(frequency([2,1,2,3,2,2,3,2,3], 3))
+
+
+
+// Find duplicate elements in an array
+// function duplicate(arr){
+//     let arr1 = []
+//     for(let i=0; i<arr.length; i++){
+//         for(let j=i+1; j<arr.length; j++){
+//             if(arr[i] == arr[j]){
+//                 if(!arr1.includes(arr[i])){
+//                     arr1.push(arr[i])
+//                     break 
+//                 }
+//             }
+//         }
+//     }
+//     return arr1
+// }
+// console.log(duplicate([2,3,5,3,6,7,2,6,7,2,2,3,7,9,8,9]))
+
+
+
+// // reverse an array with methods
+// function reverse(arr){
+//     let arr1=[]
+//     for(let i=0; i<arr.length; i++){
+//         arr1.unshift(arr[i])
+//     }
+//     return arr1
+// }
+// console.log(reverse([1,2,3,4,5]))
+
