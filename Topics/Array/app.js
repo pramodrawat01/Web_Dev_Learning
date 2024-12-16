@@ -181,13 +181,13 @@
 
 
 
-// // reverse an array with methods
-// function reverse(arr){
-//     let arr1=[]
-//     for(let i=0; i<arr.length; i++){
-//         arr1.unshift(arr[i])
-//     }
-//     return arr1
-// }
-// console.log(reverse([1,2,3,4,5]))
+// reverse an array with methods
+function reverse(arr){
+    let arr1=[]
+    for(let i=0; i<arr.length; i++){
+        arr1.unshift(arr[i])
+    }
+    return arr1
+}
+console.log(reverse([1,2,3,4,5]))
 
