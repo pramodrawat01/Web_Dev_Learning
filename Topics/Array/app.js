@@ -299,3 +299,60 @@
 // }
 // console.log(findPair(4))
 
+
+
+// // saparete odd and even numbers of an array into two differnt arrays
+// function evenAndOdd(arr){
+//     let evenArr=[], oddArr = [], evenCount = 0, oddCount = 0
+//     for(let i=0; i<arr.length; i++ ){
+//         if(arr[i]%2==0){
+//             evenArr[evenCount]= arr[i]
+//             evenCount++
+//         }
+//         else{
+//             oddArr[oddCount] = arr[i]
+//             oddCount++
+//         }
+//     }
+//     let result = console.log("even numbers : ", evenArr, "odd numbers : ", oddArr)
+//     return result
+// }
+// evenAndOdd([2,5,7,8,9,3,11,6])
+
+
+
+// // check wether two arrays are identical or not
+// function idennticalArray(arr1, arr2){
+//     let length = 0
+//     if(arr1>arr2){
+//         length = arr1.length
+//     }
+//     else{
+//         length = arr2.length
+//     }
+//     for(let i=0; i<length; i++){
+//         if(arr1[i] != arr2[i]){
+//             return `not identical`
+//         }
+//     }
+//     return `identical`
+// }
+// console.log(idennticalArray([2,5,2,5], [2,5,2,5,3]))
+
+
+
+// find common element between two arrays
+function commonElement(arr1, arr2){
+    let arr=[], count =0
+    for(let i=0; i<arr1.length; i++){
+        for(let j=0; j<arr2.length; j++){
+            if(arr1[i] ==  arr2[j]){
+                arr[count] = arr1[i]
+                count++
+            }
+        }
+    }
+    return arr
+}
+console.log(commonElement([2,3,1,7,4], [5,3,7,5,9]))
+
