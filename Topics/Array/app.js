@@ -96,10 +96,10 @@
 // console.log(find([3,4,5,62,8]));
 
 
-// // short an array in ascending order
+// // // short an array in ascending order
 // function shortArray(arr){
-//     for(let i=0; i<arr.length-1; i++){
-//         for(let j=0; j<arr.length-1; j++){
+//     for(let i=0; i<arr.length; i++){
+//         for(let j=0; j<arr.length; j++){
 //             if(arr[j]>arr[j+1]){
 //                 let temp = arr[j];
 //                 arr[j] = arr[j+1];
@@ -128,22 +128,22 @@
 // console.log(shortArray([2,-4,-12,3,9,-10,8,5]));
 
 
-// // find duplicate elements in an order
-// let arr = [2,4,3,5,2,4,1];
-// let arr1 = []
-// for(let i=0; i<arr.length-1; i++){
-//     for(let j=1; j<arr.length-1; j++){
-//         if(arr[i]==arr[j]){
-//             for(let k=0; k<arr.length-1; k++){
-//                 if(arr[i] != arr1[k] ){
-//                     arr1.push(arr[i])
-//                 }
-//             }
+// find duplicate elements in an order
+let arr = [2,4,3,5,2,4,1];
+let arr1 = []
+for(let i=0; i<arr.length-1; i++){
+    for(let j=1; j<arr.length-1; j++){
+        if(arr[i]==arr[j]){
+            for(let k=0; k<arr.length-1; k++){
+                if(arr[i] != arr1[k] ){
+                    arr1.push(arr[i])
+                }
+            }
             
-//         }
-//     }
-// }
-// console.log(arr1);
+        }
+    }
+}
+console.log(arr1);
 
 
 
@@ -192,8 +192,8 @@
 
 // // print all prime numbers from an array
 // function primeInArray(){
-//     let arr = [2,0,1,3,4,2,5,7,8,6,0,8,13,25,17]
-//     let count = 0;
+//     let arr = [11,0,1,3,4,2,5,7,8,6,0,8,13,25,17]
+//     let count = 0, arr1Index = 0;
 //     let arr1 = [];
 //     for(let i=0; i<arr.length; i++){
 //         if(arr[i]>1){
@@ -204,7 +204,8 @@
 //                 }
 //             }
 //             if(count == 0){
-//                 arr1.push(arr[i]);
+//                 arr1[arr1Index]=arr[i];
+//                 arr1Index++;
 //             }
 //             count = 0;
 //         }
@@ -341,18 +342,18 @@
 
 
 
-// find common element between two arrays
-function commonElement(arr1, arr2){
-    let arr=[], count =0
-    for(let i=0; i<arr1.length; i++){
-        for(let j=0; j<arr2.length; j++){
-            if(arr1[i] ==  arr2[j]){
-                arr[count] = arr1[i]
-                count++
-            }
-        }
-    }
-    return arr
-}
-console.log(commonElement([2,3,1,7,4], [5,3,7,5,9]))
+// // find common element between two arrays
+// function commonElement(arr1, arr2){
+//     let arr=[], count =0
+//     for(let i=0; i<arr1.length; i++){
+//         for(let j=0; j<arr2.length; j++){
+//             if(arr1[i] ==  arr2[j]){
+//                 arr[count] = arr1[i]
+//                 count++
+//             }
+//         }
+//     }
+//     return arr
+// }
+// console.log(commonElement([2,3,1,7,4], [5,3,7,5,9]))
 
