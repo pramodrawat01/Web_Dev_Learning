@@ -128,22 +128,22 @@
 // console.log(shortArray([2,-4,-12,3,9,-10,8,5]));
 
 
-// find duplicate elements in an order
-let arr = [2,4,3,5,2,4,1];
-let arr1 = []
-for(let i=0; i<arr.length-1; i++){
-    for(let j=1; j<arr.length-1; j++){
-        if(arr[i]==arr[j]){
-            for(let k=0; k<arr.length-1; k++){
-                if(arr[i] != arr1[k] ){
-                    arr1.push(arr[i])
-                }
-            }
+// // find duplicate elements in an order
+// let arr = [2,4,3,5,2,4,1];
+// let arr1 = []
+// for(let i=0; i<arr.length; i++){
+//     for(let j=1; j<arr.length; j++){
+//         if(arr[i]==arr[j]){
+//             for(let k=0; k<=arr1.length; k++){
+//                 if(arr[i] != arr1[k] ){
+//                     arr1.push(arr[i])
+//                 }
+//             }
             
-        }
-    }
-}
-console.log(arr1);
+//         }
+//     }
+// }
+// console.log(arr1);
 
 
 
@@ -357,3 +357,58 @@ console.log(arr1);
 // }
 // console.log(commonElement([2,3,1,7,4], [5,3,7,5,9]))
 
+
+// // find element which has most apperence in an array [2,4,3,5,3,6,6,3]
+// function mostAppeared(arr){
+//     let mostAppearedElement, mostAppearence=0, count
+//     for(let i =0; i<arr.length; i++){
+//         count = 0
+//         for(let j =i+1; j<arr.length; j++){
+//             if(arr[i]===arr[j]){
+//                 count++
+//             }
+//         }
+//         if(count > mostAppearence){
+//             mostAppearedElement = arr[i]
+//             mostAppearence = count
+//         }
+//     }
+//     return mostAppearedElement
+// }
+// console.log(mostAppeared([2,4,3,5,3,6,3,6,3]))
+
+
+// // find a missing element in a consecutive array (1 to N or any consecutive pattern)
+// function missingElement(arr){
+//     let gap=0, gap1, gap2,gap3
+//     gap1 = arr[1]-arr[0]
+//     gap2 = arr[arr.length-1]-arr[arr.length-2]
+//     gap3 = arr[2]-arr[1]
+//     if(gap1 === gap2){
+//         gap = gap1
+//     }
+//     else{
+//         gap = gap3
+//     }
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i]+gap !== arr[i+1]){
+//             return arr[i]+gap
+//         }
+//     }
+//     return `all element found`
+// }
+// console.log(missingElement([3,6,9,12,18]))
+
+
+// // rotate an array to left or right by k position
+// function rotateArray(arr, position){
+//     for(let i =0; i<position; i++){
+//         let temp = arr[arr.length-1]
+//         for(let j = arr.length-1; j>=0; j--){
+//             arr[j] = arr[j-1]
+//         }
+//         arr[0]= temp
+//     }
+//     return arr
+// }
+// console.log(rotateArray([2,3,4,5,6,7], 3))
