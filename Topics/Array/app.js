@@ -412,3 +412,46 @@
 //     return arr
 // }
 // console.log(rotateArray([2,3,4,5,6,7], 3))
+
+
+// // merge two shorted array in one shorted array [2,3,1,4,1]
+// function short(arr1, arr2){
+//     count = arr1.length
+//     for(let i=0;i<arr2.length; i++){
+//         arr1[count]= arr2[i]
+//         count++
+//     }
+//     for(let j=0; j<arr1.length; j++){
+//         for(let k=0; k<arr1.length; k++){
+//             if(arr1[j] < arr1[k]){
+//                 let temp = arr1[k]
+//                 arr1[k] = arr1[j]
+//                 arr1[j] = temp
+//             }
+//         }
+//     }
+//     return arr1
+// }
+// console.log(short([2,3,4,5],[0,1,1,6,9]))
+
+
+// find the majority element in an array (apperence more than n/2 times, where n is the length of an array)
+function majorityElement(arr){      // [2,2,4,6,2,5,2,6,2,3]
+    let mAppEle=arr[0], count, mAppCount=0
+    for(let i=0;i<arr.length; i++){
+        count = 0
+        for(let j = i; j<arr.length; j++){
+            if(arr[i] == arr[j]){
+                count++
+            }
+        }
+        if(count>parseInt(arr.length/2)){
+            if(count>mAppCount){
+                mAppEle = arr[i]
+                mAppCount = count
+            }
+        }
+    }
+    return mAppEle
+}
+console.log(majorityElement([1,2,3,2,3,2,2,2,3,3,3,3,3]))
