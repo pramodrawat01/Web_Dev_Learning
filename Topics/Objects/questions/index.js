@@ -48,6 +48,17 @@
 
 
 
-//  Write a factory function createPerson that takes a name, age, and city as arguments
-//  and returns an object with those properties and a method introduce that returns a
-//  string introducing the person.
+// //  Write a factory function createPerson that takes a name, age, and city as arguments
+// //  and returns an object with those properties and a method introduce that returns a
+// //  string introducing the person.
+// function createPerson(name, age , city){
+//     return{
+//         nam : name,
+//         umr : age,
+//         ghar: city
+//     }
+// }
+// console.log(createPerson("shreya",23,"mumbai"))
+
+
+
