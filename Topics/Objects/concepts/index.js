@@ -63,3 +63,6 @@ class Person{
 }
 const person1 = new Person("atul", 32)
 person1.greet()
+
+// console prototype
+console.log(Object.getPrototypeOf(person1))
