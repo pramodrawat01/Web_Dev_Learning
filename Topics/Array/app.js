@@ -457,22 +457,22 @@
 //  console.log(majorityElement([1,2,3,2,3,2,2,2,3,3,3,3,3]))
 
 
-// // second largest element in an array
-// function secondLargest(arr){
-//     let largest = arr[0], largestIndex = 0, secondLarg = 0
-//     for(let i=0;i<arr.length; i++){
-//         if(arr[i] > largest){
-//             largest = arr[i]
-//             largestIndex = i
-//         }  
-//     }
+// second largest element in an array
+function secondLargest(arr){
+    let largest = arr[0], largestIndex = 0, secondLarg = 0
+    for(let i=0;i<arr.length; i++){
+        if(arr[i] > largest){
+            largest = arr[i]
+            largestIndex = i
+        }  
+    }
 
-//     arr.splice(largestIndex, 1)
-//     for(let j=0; j<arr.length; j++){
-//         if(arr[j]>secondLarg){
-//             secondLarg = arr[j]
-//         }
-//     }
-//     return secondLarg
-// }
-// console.log(secondLargest([5,50,3,6,30,90]))
+    arr.splice(largestIndex, 1)
+    for(let j=0; j<arr.length; j++){
+        if(arr[j]>secondLarg){
+            secondLarg = arr[j]
+        }
+    }
+    return secondLarg
+}
+console.log(secondLargest([5,50,3,6,30,90]))
