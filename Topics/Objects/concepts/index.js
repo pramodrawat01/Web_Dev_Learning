@@ -60,9 +60,12 @@ class Person{
     greet(){
         console.log(`Hi, my name is ${this.name} and I'm ${this.age}`)
     }
+    say(){
+        console.log(`Hi, my name is ${this.name} and I'm ${this.age}`)
+    }
 }
 const person1 = new Person("atul", 32)
 person1.greet()
 
-// console prototype
+console.log(Person.prototype);
 console.log(Object.getPrototypeOf(person1))

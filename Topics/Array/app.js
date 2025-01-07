@@ -96,7 +96,7 @@
 // console.log(find([3,4,5,62,8]));
 
 
-// // // short an array in ascending order
+// // short an array in ascending order
 // function shortArray(arr){
 //     for(let i=0; i<arr.length; i++){
 //         for(let j=0; j<arr.length; j++){
@@ -287,12 +287,12 @@
 // // all pairs of an array whose sum is equal to the given number    ???
 // function findPair(num){
 //     let arr = [1,2,3,4];
-//     let arr1= []
+//     let arr1= [], count = 0
 //     for(let i=0; i<arr.length; i++){
 //         for(let j=0; j<arr.length; j++){
-//             if(arr[i]+arr[j]==num){
-//                 let pair = `(${arr[i], arr[j]})`;
-//                 arr1.push(pair)
+//             if(arr[i]+arr[j]===num){
+//                 arr1[count] = `(${arr[i]}, ${arr[j]})`
+//                 count++
 //             }
 //         }
 //     }
@@ -454,4 +454,25 @@
 //     }
 //     return mAppEle
 // }
-// console.log(majorityElement([1,2,3,2,3,2,2,2,3,3,3,3,3]))
+//  console.log(majorityElement([1,2,3,2,3,2,2,2,3,3,3,3,3]))
+
+
+// // second largest element in an array
+// function secondLargest(arr){
+//     let largest = arr[0], largestIndex = 0, secondLarg = 0
+//     for(let i=0;i<arr.length; i++){
+//         if(arr[i] > largest){
+//             largest = arr[i]
+//             largestIndex = i
+//         }  
+//     }
+
+//     arr.splice(largestIndex, 1)
+//     for(let j=0; j<arr.length; j++){
+//         if(arr[j]>secondLarg){
+//             secondLarg = arr[j]
+//         }
+//     }
+//     return secondLarg
+// }
+// console.log(secondLargest([5,50,3,6,30,90]))
