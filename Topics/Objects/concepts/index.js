@@ -108,3 +108,21 @@
 // console.log(user2.counter())  // 2
 
 // // myClass.#count = 5         // syntex error, private field is not accessable outside the class
+
+// // static and private field together
+// class myClass{
+//     static #staticprivate = "this is static private field"
+//     getstaticprivatefield(user){
+//         return `${myClass.#staticprivate}, ${user}`
+//     }
+// }
+
+// const user1 = new myClass()
+// const user2 = new myClass()
+
+// console.log(user1.getstaticprivatefield(1))
+// console.log(user2.getstaticprivatefield(2))
+
+
+// Instance field in JS : it is unique for each instance of class, but in static field it
+//  shares with all instance of class
