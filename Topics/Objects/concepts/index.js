@@ -51,21 +51,60 @@
 // const person01 = new Person("saurabh", 23)
 // person01.greet()
 
-// Inheritance using Classes (ES6)
-class Person{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
-    }
-    greet(){
-        console.log(`Hi, my name is ${this.name} and I'm ${this.age}`)
-    }
-    say(){
-        console.log(`Hi, my name is ${this.name} and I'm ${this.age}`)
-    }
-}
-const person1 = new Person("atul", 32)
-person1.greet()
+// // Inheritance using Classes (ES6)
+// class Person{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     greet(){
+//         console.log(`Hi, my name is ${this.name} and I'm ${this.age}`)
+//     }
+//     say(){
+//         console.log(`Hi, my name is ${this.name} and I'm ${this.age}`)
+//     }
+// }
+// const person1 = new Person("atul", 32)
+// person1.greet()
 
-console.log(Person.prototype);
-console.log(Object.getPrototypeOf(person1))
+// console.log(Person.prototype);
+// console.log(Object.getPrototypeOf(person1))
+
+
+// // Static, Private and instence field in js
+// // static field : shared with all instence of class but only accessable using class
+// class myClass{
+//     static count = 0
+//     increment (){
+//         return myClass.count++;
+//     }
+// }
+// const class1 = new myClass()
+// class1.increment()                         // 1
+// class1.increment()                         // 2
+// console.log(class1.increment())            // 2
+// myClass.count = 53                         // can also modified outside the class
+// console.log(myClass.count)
+
+// // Private field :
+// class myClass{
+//     #privatefield ="'this is private field'"
+//     #count = 0;
+//     counter(){
+//         return this.#count++
+//     }
+//     getPrivateField(){
+//         return `accessing ${this.#privatefield}`
+//     }
+// }
+// const user1 = new myClass()
+// console.log(user1.getPrivateField())
+
+// const user2 = new myClass()
+// user2.counter()     // 1
+// user1.counter()     // 1 : no increment
+// user1.counter()     // 1 : no increment
+// user2.counter()     // 2
+// console.log(user2.counter())  // 2
+
+// // myClass.#count = 5         // syntex error, private field is not accessable outside the class
