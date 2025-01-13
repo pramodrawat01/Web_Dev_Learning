@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="heading">Weather App</div>
+        <div class="divi">
+            <div class="current">Current Weather</div>
+            <div class="search">Search Weather</div>
+        </div>
+
+        <div class="search-tab">
+            <div class="search-container">
+                <input type="text" placeholder="Enter your city" class="search-city">
+                <button class="search-btn">Search</button>
+            </div>
+            <p id="city-name"></p>
+            <div class="date-time"></div>
+            <p id="temp"></p>
+            <div class="weather-type"></div>
+            <div class="search-humid-wind">
+                <div class="humid">
+                    <div class="humid-text">Humidity : </div>
+                    <div class="search-humidity"></div>
+                </div>
+                <div class="windspeed">
+                    <div class="wind-text">Wind-Speed :</div> 
+                    <div class="search-wind"></div>
+                    km/h
+                </div>
+            </div>
+        </div>
+
+        <div class="current-tab">
+            <div class="current-city"></div>
+            <div class="current-temp"></div>
+            <div class="type"></div>
+            <div class="humidity-wind">
+                <div class="humid">
+                    <div class="humid-text">Humidity : </div>
+                    <div class="humidity"></div>
+                </div>
+                <div class="windspeed">
+                    <div class="wind-text">Wind-Speed :</div> 
+                    <div class="wind"></div>
+                    km/h
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
