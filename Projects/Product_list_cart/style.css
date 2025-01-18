@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: auto;
+    width: 75vw;
+    overflow-x: hidden;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.heading, .cart{
+    margin-top: 50px;
+}
+.heading{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.products-container{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.prod{
+    height: 300px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.img1{
+    height:180px;
+    width:100%; 
+    background-image: url(./Assets/image-waffle-desktop.jpg);
+    background-size: 100% 100%;
+    border-radius: 15px;
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: -20px;
+}
+.cart-btn, .quentity{
+    display: flex;
+    width: 150px;
+    background-color: burlywood;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position:  absolute;
+    gap: 10px;
+}
+.quentity{
+    width: 150px;
+    display: flex;
+    gap: 20px;
+    background-color: antiquewhite;
+}
+.dish{
+    margin-top: 30px;
+}
+.dish-desc{
+    font-weight: 600;
+}
+.price{
+    color:  brown;
+}
