@@ -1,13 +1,13 @@
 // //This keyword in js
 
 // // This in functions (ES5)
-// // Not-strict mode
-// function thisInNonStrict(){
-//     console.log(this)
-// }
-// thisInNonStrict()
+// // Not-strict mode             // refer to window (in browser) and global(in node) object
+function thisInNonStrict(){
+    console.log(this)
+}
+thisInNonStrict()   
 
-// // strict mode
+// strict mode
 // "use strict"
 // function thisInStrict(){
 //     console.log(this)
@@ -26,27 +26,27 @@
 // obj.greet();
 
 
-// // (ES6 in Object) : refer to window (in browser) and global(in node) object
+// (ES6 in Object) : Arrow functions do not have their own this. 
+// Instead, they inherit this from the surrounding (lexical) context.
 // const obj = {
 //         name : "John",
 //         greet : ()=>{
-//             console.log(this.name)          // undefined
+//             console.log(this)          // undefined
 //         }
 //     }
 // obj.greet();
 
-// // ES6 in ES5 --
-const obj = {
-    name : "alice",
-    greet : function(){
-        const arrowFun = ()=>{
-            console.log(this.name)
-        }
-        arrowFun()
-    }
-}
-
-obj.greet()
+// // ES6 in ES5 --  
+// const obj1 = {
+//     name : "alice",
+//     greet : function(){
+//         const arrowFun = ()=>{
+//             console.log(this.name)
+//         }
+//         arrowFun()
+//     }
+// }
+// obj1.greet()
 
 // // This in Classes (ES6) : refer to the instence of the class
 // class Person {
