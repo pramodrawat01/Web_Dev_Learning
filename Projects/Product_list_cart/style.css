@@ -74,6 +74,7 @@ body{
 .cart-btn{
     position: absolute;
     top: 0;
+    z-index: 0;
 }
 .quentity{
     width: 200px;
@@ -105,5 +106,8 @@ body{
 }
 
 index{
-    z-index: 10;
+    z-index: -10
+}
+hide{
+    display: none;
 }
