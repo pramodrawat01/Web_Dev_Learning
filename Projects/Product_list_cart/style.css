@@ -43,46 +43,35 @@ body{
     background-size: 100% 100%;
     border-radius: 15px;
 }
-.btn{
-    width: 150px;
+.img2{
+    height:180px;
+    width:100%; 
+    background-image: url(./Assets/image-creme-brulee-desktop.jpg);
+    background-size: 100% 100%;
+    border-radius: 15px;
+}
+.buttons{
+    /* position: absolute; */
+}
+.add-to-cart, .counter{
+    width: 100px;
     height: 40px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    margin-top: -20px;
-}
-
-.cart-btn, .quentity{
-    display: flex;
-    width: 150px;
-    background-color: burlywood;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    /* position:  absolute; */
-    gap: 10px;
-    cursor: pointer;
-}
-.quentity{
-    width: 150px;
-    display: flex;
-    gap: 20px;
-    background-color: antiquewhite;
-    /* display: none; */
-    
-}
-.cart-btn{
     position: absolute;
-    top: 0;
-    z-index: 0;
 }
-.quentity{
-    width: 200px;
+.counter,.counter2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+}
+.increment, .decrement{
+    width: 30px;
+    font-size: 1.5rem;
 }
 .dish{
-    margin-top: 30px;
+    margin-top: 50px;
 }
-.dish-desc{
+.dish-name{
     font-weight: 600;
 }
 .price{
@@ -91,10 +80,10 @@ body{
 
 .cart{
     height: 300px;
-    width: 250px;
+    width: 280px;
     position: fixed;
     top: 0;
-    right: 170px;
+    right: 15%;
     background-color: white;
     border-radius: 15px;
     padding: 20px;
@@ -105,9 +94,6 @@ body{
     gap: 15px;
 }
 
-index{
-    z-index: -10
-}
-hide{
+.hide{
     display: none;
 }
