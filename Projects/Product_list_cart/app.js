@@ -66,3 +66,4 @@ incre.addEventListener('click',()=>{
 
     }
 })
+// status changes
