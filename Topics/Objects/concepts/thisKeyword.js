@@ -48,17 +48,17 @@ thisInNonStrict()
 // }
 // obj1.greet()
 
-// // This in Classes (ES6) : refer to the instence of the class
-// class Person {
-//     constructor(name){
-//         this.name = name;
-//     }
-//     greet(){
-//         console.log(this.name)
-//     }
-// }
-// const person1 = new Person("John")
-// person1.greet()
+// This in Classes (ES6) : refer to the instence of the class
+class Person {
+    constructor(name){
+        this.name = name;
+    }
+    greet(){
+        console.log(this.name)
+    }
+}
+const person1 = new Person("John")
+person1.greet()
 
-// const person2 = new Person("alice")
-// person2.greet()
+const person2 = new Person("alice")
+person2.greet()
