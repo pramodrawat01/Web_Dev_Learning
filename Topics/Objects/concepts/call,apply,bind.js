@@ -15,6 +15,7 @@
 //     name : "obj2"
 // }
 
+// // call
 // obj.say.call(obj2)
 
 // // apply
