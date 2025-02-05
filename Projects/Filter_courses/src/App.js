@@ -1,41 +1,42 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState } from 'react'
+import Navbar from './components/Navbar';
+import Filter from './components/Filter';
+import Cards from './components/Cards';
+import { apiUrl, filterData } from './data';
+import { useEffect } from 'react';
+import {toast} from 'react-toastify';
 const App = () => {
 
-  const[text, setText] =useState('')
+  const[courses, setCourses] = useState(null)
+  ///console.log(courses)
+  useEffect( () => {
+    const fetchData = async () =>{
+      try{
+        const result = await fetch(apiUrl);
+        const output = await result.json();
 
-  function onChangeHandler(e){
-    console.log(text)
-    setText(e.target.value)
-  }
-  // variation - 1
-  // useEffect( ()=>{
-  //   console.log("UI rendered")
-  // })
-
-  // variation - 2
-  // useEffect( () =>{
-  //   console.log("ui rendered")    // print twice cause of <React.StrictMode>
-  // }, [])
-
-  // variation - 3 first render whenever the dependencies changes here
-  // useEffect( ()=> {
-  //     console.log("text changed")
-  // }, [text])
-
-  // variation 4 - to handle unmounting of a component or remove privious listener before adding new one
-
-  useEffect( () =>{
-    // add event listener here
-    console.log("add event listener")
-    return ()=>{
-      console.log("remove event listener")
+        // sava data into a variable
+        setCourses(output.data)
+        // console data 
+        console.log(output)
+      }
+      catch(err){
+        toast.err("something went wrong") 
+      }
     }
-  })
+    fetchData();
+  }, [])
 
   return <div>
-    <input type="text" placeholder="enter text here" className="text-input" onChange={onChangeHandler}></input>
+    <Navbar/>
+    <Filter filterData = {filterData}>
+
+    </Filter>
+    <Cards courses = {courses}>
+
+    </Cards>
   </div>;
 };
 
 export default App;
+
