@@ -8,9 +8,9 @@ const Card = ({course}) =>{
     let setLikedCourses = course.setLikedCourses;
 
     function onHeartBtn(){
-        if(likedCourses.include(course.id)) {
+        if(likedCourses.includes(course.id)) {
             // liked already
-            setLikedCourses( (prev) => prev.filter((id) => (id !== course.id) ) );
+            setLikedCourses( (prev) => prev.filter((cid) => (cid !== course.id) ) );
             toast.warning("like removed")
         }
         else{

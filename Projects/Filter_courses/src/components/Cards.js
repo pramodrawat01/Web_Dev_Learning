@@ -1,4 +1,6 @@
 
+
+
 import React, { useState } from 'react'
 import Card from './Card'
 
@@ -32,3 +34,6 @@ const Cards = ({courses}) =>{
     )
 }
 export default Cards
+
+
+
