@@ -4,19 +4,27 @@
 import React, { useState } from 'react'
 import Card from './Card'
 
-const Cards = ({courses}) =>{
+const Cards = ({courses,category}) =>{
 
+    // let category = courses.category
     const[likedCourses, setLikedCourses] = useState([]);
-    const allCourses = []
+    
 
     // return array of all courses 
     const getCourses = () =>{
-        Object.values(courses).forEach((courseCategory) => {
-            courseCategory.forEach((course => {
-                allCourses.push(course);
-            }))
-        })
-        return allCourses ;
+        if(category === "All"){
+            const allCourses = []
+            Object.values(courses).forEach((courseCategory) => {
+                courseCategory.forEach((course => {
+                    allCourses.push(course);
+                }))
+            })
+            return allCourses ;
+        }
+        else{
+            return courses[category]
+        }
+        
     }
 
 
