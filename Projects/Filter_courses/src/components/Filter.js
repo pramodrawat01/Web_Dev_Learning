@@ -1,10 +1,10 @@
 
 import React from 'react'
 
-const Filter = ({filterData}) =>{
+const Filter = ({filterData, setCategory, category}) =>{
 
-    let category = filterData.category
-    let setCategory = filterData.setCategory
+    //let category = filterData.category
+    //let setCategory = filterData.setCategory
 
     function onFilterHandler(title){
         setCategory(title)
@@ -17,7 +17,11 @@ const Filter = ({filterData}) =>{
                     return (
                         <div key={data.id}>
                             <button className={`text-lg px-2 py-1 rounded-md font-medium
-                                text-white bg-black hover:bg-opacity-80 border-2 transition-all duration-300`}
+                                text-white bg-black hover:bg-opacity-80 border-2 transition-all duration-300
+                                ${category === data.title ?
+                                "bg-opacity-60 border-white" : 
+                                "bg-opacity-40 border-transparent"}
+                                `}
                                 onClick={ () => onFilterHandler(data.title)}>
                                 {data.title}
                             </button>
