@@ -1,150 +1,70 @@
 
-import { useState } from 'react';
+//import { useState } from 'react';
 import './App.css';
 
 
 function App() {
 
-  // const[firstName, setFirstName] = useState("");
-  // const[lastName, setLastName] = useState("");
+  return(
+    <div className='wrapper'>
+      <label>First Name</label><br/>
+      <input
+      type="text"
+      placeholder="Shyam"></input>
 
-  // console.log(firstName)
-  // console.log(lastName)
-  // function onInputFirst(event){
-    // console.log("first name printing")
-    // console.log(event.target.value)
+      <br/><br/>
+      <label>Last Name</label><br/>
+      <input
+      type="text"
+      placeholder="Sharma"></input>
 
-  //   console.log("on first name hook")
-  //   setFirstName(event.target.value)
-  // }
+      <br/><br/>
+      <label>Email</label><br/>
+      <input
+      type="email"
+      placeholder="shyamshr45@gmail.com"></input>
 
-  // function onInputLast(event){
-    // console.log("printing lastname")
-    // console.log(event.target.value)
+      <br/><br/>
+      <label>Country</label><br/>
+      <select>
+        <option>India</option>
+        <option>Aus</option>
+        <option>Eng</option>
+        <option>Sa</option>
+      </select>
 
-  //   console.log("on last name hook")
-  //   setLastName(event.target.value)
-  // }
+      <br/><br/>
+      <label>Street address</label><br/>
+      <input
+      type="text"
+      placeholder="RZ-H 503 dwarka, delhi"></input>
 
+      <br/><br/>
+      <label>City</label><br/>
+      <input
+      type="text"
+      placeholder="Delhi"></input>
 
-  const [formData, setFormData] = useState(
-    { 
-      firstName : "", lastName :"",
-      email: "", comment : "", visible : false, mode : "", favCard : ""
-    })
+      <br/><br/>
+      <label>Street address</label><br/>
+      <input
+      type="text"
+      placeholder="RZ-H 503 dwarka, delhi"></input>
 
-  console.log(formData)
-  function onChangeHandler(event){
+      <br/><br/>
+      <label>State / Province
+      </label><br/>
+      <input
+      type="text"
+      placeholder="West Bengal"></input>
 
-    const {name, value, type, checked} = event.target   // destructuring of event.target
-    setFormData( prvFormData => {
-      return {
-        ...prvFormData,                         // else will be same 
-        // [event.target.name] : event.target.value        // value set krega firstname and lastname ki
-        //  can use this insted of above line
-        [name] : type === "checkbox" ? checked : value     
-      }
-    })
-  }
-
-  return (
-    <div className="App">
-      <form>
-      <br></br>
-        <input
-        type='text'
-        placeholder='enter first-name'
-        name='firstName'
-        onChange={onChangeHandler}
-        
-        // to maintain state for each (controlled component)
-        value={formData.firstName}>               
-        
-        </input>
-
-
-<br></br>
-        <br></br>
-        <input
-        type='text'
-        placeholder='enter last-name'
-        name='lastName'
-        onChange={onChangeHandler}
-        value={formData.lastName}>
-        
-        </input>
-
-        <br></br>
-      <br></br>
-        <input
-        type='email'
-        placeholder='enter your email'
-        name='email'
-        onChange={onChangeHandler}
-        value={formData.email}>
-        
-        </input>
-
-<br></br>
-        <br></br>
-        <textarea
-        placeholder='enter your comments..'
-        onChange={onChangeHandler}
-        name = "comment"
-        value={formData.comment}>
-
-        </textarea>
-        
-        <br></br>
-        <br></br>
-        <input
-        type='checkbox'
-        name='visible'
-        id="isvisible"
-        onChange={onChangeHandler}
-        checked={formData.visible}>
-        
-        </input>
-        <label htmlFor='isvisible'>are you coming for party?</label>
-
-<br></br>
-<br></br>
-
-        <fieldset>
-          <legend>Mode : </legend>
-          <input
-        type='radio'
-        onChange={onChangeHandler}
-        name='mode'
-        value = "online-mode"
-        id ='online-mode'
-        checked={formData.mode === "online-mode"}>     // take value as string of radio btn
-
-        </input>
-        <label htmlFor='online-mode'> Online Mode</label>
-
-        <br></br>
-        <br></br>
-        
-        <input
-        type='radio'
-        onChange={onChangeHandler}
-        name='mode'
-        value= "offline-mode"
-        id='offline-mode'
-        checked={formData.mode === "offline-mode"} >
-
-
-        </input>
-        <label htmlFor='offline-mode'> Offline Mode</label>
-        </fieldset>
-        
-        <select>
-
-        </select>
-      </form>
+      <br/><br/>
+      <label>Zip / Postal code</label><br/>
+      <input
+      type="text"
+      placeholder="West Bengal"></input>
     </div>
-  );
+  )
 }
 
 export default App;
