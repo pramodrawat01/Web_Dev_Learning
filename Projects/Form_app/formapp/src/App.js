@@ -269,9 +269,9 @@ function App() {
             type="radio"
             name="notif"
             id='sameasmailid'
-            value="sameasmail"
+            value="same as mail"
             onChange={onInputHandler}
-            checked={formData.notif === "sameasmail"}></input>
+            checked={formData.notif === "same as mail"}></input>
             <label htmlFor='sameasmailid'>Same as mail</label>
           </div>
 
@@ -280,9 +280,9 @@ function App() {
             type="radio"
             name="notif"
             id='nopush'
-            value="nopush"
+            value="no push notification"
             onChange={onInputHandler}
-            checked={formData.notif === "nopush"}></input>
+            checked={formData.notif === "no push notification"}></input>
             <label htmlFor='nopush'>No push Notification </label>
           </div>
         </fieldset>
