@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    height: 100vh;
+    width:100vw;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.to-do-app{
+    width: 50%;
+    background-color:rgb(87, 159, 15) ;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container{
+    background: #b3b3b3;
+}
+
+.heading{
+    text-align: center;
+    padding-block: 10px;
+}
+.add-task{
+    display: flex;
+    justify-content: space-between;
+    background: #dedede;
+    border-radius: 20px;
+
+}
+.input{
+    padding-inline: 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 600px;
+}
+.btn{
+    padding: 5px;
+    padding-inline: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(236, 113, 68);
+    color: white;
+}
+ul li{
+    list-style: none;
+    user-select: none;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li:before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    top: 12px;
+    left: 8px;
+    background-color: white;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-color: rgb(236, 113, 68);
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background-color: #555;
+}
